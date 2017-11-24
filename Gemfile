@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.0.2"
-gem "jekyll-watch"
+gem "jekyll"
+gem "jekyll-feed"
+gem "jekyll-paginate"
 gem "jekyll-sitemap"
+gem "jekyll-seo-tag"
+gem "jekyll-email-protect"
+gem "jekyll-postfiles"

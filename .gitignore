@@ -1,1 +1,10 @@
 _site
+_drafts
+ftpconfig.js
+Gemfile.lock
+.sass-cache
+.jekyll-metadata
+.DS_Store
+node_modules
+*.sublime-*
+.vscode
