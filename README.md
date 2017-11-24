@@ -1,93 +1,60 @@
-### Phantom for Jekyll
+# Left
 
-A minimalist, responsive portfolio theme for [Jekyll](http://jekyllrb.com/) with Bootstrap.
+Left is a clean, whitespace-happy layout for [Jekyll](https://github.com/mojombo/jekyll).
 
-![preview](preview.jpg)
+This is designed to be an easy layout to modify for your own blog. It was
+extracted from [zachholman.com](http://zachholman.com/), which means it was
+battle-hardened from years of posting serious blog posts about emoji and swear
+words.
 
-[See it in action](http://jamigibbs.github.io/phantom/).
+You can see it live right here: <http://zachholman.com/left/>
 
-### Fancy using it for your own site?
+![Left](http://cl.ly/image/3S2r1p2C0E2B/content)
 
-Here are some steps to get you started:
+## Installation
 
-1. Clone this repo and cd into the directory:
+- [Fork this repository](https://github.com/holman/left/fork)
+- Clone it: `git clone https://github.com/YOUR-USER/left`
+- Install ruby things: `bundle install` (if this doesn't work, look into [installing Bundler](http://bundler.io))
+- Start it up: `script/server`
 
-  `git clone https://github.com/jamigibbs/phantom.git your-dir-name`
-  `cd your-dir-name`
+You should have a server up and running locally at <http://localhost:4000>.
 
-2. Run Jekyll:
+## Customization
 
-  `jekyll serve --watch`
+Next you'll want to change a few things. Most of them can be changed directly in
+[_config.yml](https://github.com/holman/left/blob/gh-pages/_config.yml). That's
+where we'll pull your name, Twitter username, and things like that.
 
-  _Don't have Jekyll yet? [Get `er installed then!](http://jekyllrb.com/docs/installation/)_
+There's a few other places that you'll want to change, too:
 
-3. Visit in your browser at:
+- [CNAME](https://github.com/holman/left/blob/gh-pages/CNAME): If you're using
+  this on GitHub Pages with a custom domain name, you'll want to change this
+  to be the domain you're going to use. All that should be in here is a
+  domain name on the first line and nothing else (like: `example.com`).
+- [favicon.ico](https://github.com/holman/left/blob/gh-pages/favicon.ico): This
+  is a smaller version of my gravatar for use as the icon in your browser's
+  address bar. You should change it to whatever you'd like.
+- [apple-touch-icon.png](https://github.com/holman/left/blob/gh-pages/apple-touch-icon.png):
+  Again, this is my gravatar, and it shows up in iOS and various other apps
+  that use this file as an "icon" for your site.
 
-  `http://127.0.0.1:4000`
+## Deployment
 
-### Launching with Github Pages :rocket:
+Left is designed to be deployed to [GitHub Pages](http://pages.github.com). It
+uses [repository metadata](https://help.github.com/articles/repository-metadata-on-github-pages)
+to generate some of your content, like your GitHub URL and avatar information (so you
+might not actually see it locally until you push it up to Pages).
 
-Jekyll + Github pages is a marriage made in heaven. You can [use your own custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) or use the default Github url (ie. http://username.github.io/repository) and not bother messing around with DNS settings.
+All you should have to do is rename your repository on GitHub to be
+`username.github.com`. Since everything is on the `gh-pages` branch, you
+should be able to see your new site at <http://username.github.io>.
 
-### Theme Features
+## Licensing
 
-**Navigation**
+This is [MIT](https://github.com/holman/left/blob/gh-pages/LICENSE) with no
+added caveats, so feel free to use this on your site without linking back to
+me or using a disclaimer or anything silly like that.
 
-To activate a navigation bar in the header, set the global `nav` variable to true in:
-
-`/_data/global.yml`
-
-Then add your navigation items in the `/_data/nav.yml` file. For example:
-
-```
-main:
-    - { url: '/', text: 'Home' }
-    - { url: '/about', text: 'About' }
-```
-
-**Contact Form**
-
-You can display a contact form within the modal window template. This template is already setup to use the [Formspree](https://formspree.io) email system. You'll just want to add your email address to the form in `/_includes/contact-modal.html`.
-
-Place the modal window template in any place you'd like the user to click for the contact form.
-The template will display a link to click for the contact form modal window:
-
-```
-{% include contact.html %}
-{% include contact-modal.html %}
-```
-
-**Animation Effects**
-
-Animations with CSS classes are baked into the theme. To animate a section or element, simply add the animation classes:
-
-```
-<div id="about-me" class="wow fadeIn">
-  I'm the coolest!
-</div>
-```
-
-For a complete list of animations, see the [animation list](http://daneden.github.io/animate.css/).
-
-**Pagination**
-
-By default, pagination on the home page will activate after 10 posts. You can change this within `_config.yml`. You can add the pagination to other layouts with:
-
-```
-  {% for post in paginator.posts %}
-    {% include post-content.html %}
-  {% endfor %}
-
-  {% include pagination.html %}
-```
-
-Read more about the [pagination plugin](http://jekyllrb.com/docs/pagination/).
-
-### Credit
-
-* Bootstrap, http://getbootstrap.com/, (C) 2011 - 2016 Twitter, Inc., [MIT](https://github.com/twbs/bootstrap/blob/master/LICENSE)
-
-* Wow, https://github.com/matthieua/WOW, (C) 2014 - 2016 Matthieu Aussaguel
-, [GPL](https://github.com/matthieua/WOW#open-source-license)
-
-* Animate.css, https://github.com/daneden/animate.css, (C) 2016 Daniel Eden, [MIT](https://github.com/daneden/animate.css/blob/master/LICENSE)
+If you'd like give me credit somewhere on your blog or tweet a shout out to
+[@holman](https://twitter.com/holman), well hey, I'll take it.
