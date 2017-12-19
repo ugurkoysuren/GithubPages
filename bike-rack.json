@@ -1,0 +1,15 @@
+{
+	"type" : "FeatureCollection",
+	"features" : [{ 
+		"type" : "Feature", 
+		"properties" : {  
+			"capacity" : "10", 
+			"type" : "U-Rack",
+			"mount" : "Surface"
+		}, 
+		"geometry" : { 
+			"type" : "Point", 
+			"coordinates" : [ -71.073283, 42.417500 ] 
+		}
+	}]
+}
